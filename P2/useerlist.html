@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Registered Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        const tableBody = document.getElementById('userTableBody');
+        users.forEach(user => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${user.password}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>

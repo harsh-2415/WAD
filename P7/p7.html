@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Admin Dashboard</title>
+
+  <!-- Copy this link from jquerymobile.com/download/ -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    .ui-header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      text-shadow: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .ui-content {
+      background: white;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .ui-btn {
+      background: linear-gradient(to right, #007bff, #00c6ff) !important;
+      border: none !important;
+      color: white ;
+      font-weight: 600;
+      border-radius: 30px !important;
+      margin: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .ui-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .ui-footer {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    .ui-footer h4 {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div data-role="page" id="dashboard">
+  <div data-role="header">
+    <h1>Admin Dashboard</h1>
+  </div>
+
+  <div data-role="content">
+    <h3>Welcome, Admin!</h3>
+    <p>Use the buttons below to manage the system.</p>
+    <a href="#students" class="ui-btn ui-icon-user ui-btn-icon-left">Manage Students</a>
+    <a href="#exams" class="ui-btn ui-icon-edit ui-btn-icon-left">Manage Exams</a>
+    <a href="#results" class="ui-btn ui-icon-check ui-btn-icon-left">View Results</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>© 2025 ExamSys</h4>
+  </div>
+</div>
+
+<div data-role="page" id="students" >
+    <div data-role="header" data-add-back-btn="true">
+      <h1>Manage Student</h1>
+    </div>
+  
+    <div data-role="content" >
+      <h3>Welcome, To Manage Student!</h3>
+      <p>Use the buttons below to Manage the Student.</p>
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#">Add Student</a></li>
+        <li><a href="#">Edit Student</a></li>
+        <li><a href="#">Remove Student</a></li>
+      </ul>
+    </div>
+  
+    <div data-role="footer" data-position="fixed">
+      <h4>© 2025 ExamSys</h4>
+    </div>
+</div>
+ 
+<div data-role="page" id="exams">
+    <div data-role="header"  data-add-back-btn="true">
+      <h1>Manage Exams</h1>
+    </div>
+  
+    <div data-role="content" data-add-back-btn="true">
+      <h3>Welcome, To Manage Exam!</h3>
+      <p>Use the buttons below to Manage the Exams.</p>
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#">Add Exam</a></li>
+        <li><a href="#">Edit Exam</a></li>
+        <li><a href="#">Delete Exam</a></li>
+      </ul>
+    </div>
+  
+    <div data-role="footer" data-position="fixed">
+      <h4>© 2025 ExamSys</h4>
+    </div>
+</div>
+
+<div data-role="page" id="results" >
+    <div data-role="header" data-add-back-btn="true">
+      <h1>View Result</h1>
+    </div>
+  
+    <div data-role="content" >
+      <h3>Welcome, To View Result!</h3>
+      <p>Use the buttons below to View Result.</p>
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#">Result - Student A</a></li>
+        <li><a href="#">Result - Student B</a></li>
+        <li><a href="#">Result - Student C</a></li>
+      </ul>
+    </div>
+  
+    <div data-role="footer" data-position="fixed">
+      <h4>© 2025 ExamSys</h4>
+    </div>
+</div>
+
+</body>
+</html>
